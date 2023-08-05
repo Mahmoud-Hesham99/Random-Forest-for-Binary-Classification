@@ -1,0 +1,63 @@
+{
+    "num_trials": 100,
+    "hyperparameters": [
+      {
+        "name": "n_estimators",
+        "short_desc": "The number of trees in the forest.",
+        "type": "int",
+        "search_type": "uniform",
+        "range_low": 100,
+        "range_high": 800
+      },
+      {
+        "name": "max_depth",
+        "short_desc": "The maximum depth of the tree.",
+        "type": "int",
+        "search_type": "uniform",
+        "range_low": 1,
+        "range_high": 30
+      },
+      {
+        "name": "min_samples_split",
+        "short_desc": "The minimum number of samples required to split an internal node.",
+        "type": "int",
+        "search_type": "uniform",
+        "range_low": 2,
+        "range_high": 30
+      },
+      {
+        "name": "min_samples_leaf",
+        "short_desc": "The minimum number of samples required to be at a leaf node.",
+        "type": "int",
+        "search_type": "uniform",
+        "range_low": 1,
+        "range_high": 20
+      },
+      {
+        "name": "max_features",
+        "short_desc": "The number of features to consider when looking for the best split.",
+        "type": "categorical",
+        "categories": ["auto","sqrt", "log2"]
+      },
+      {
+        "name": "min_impurity_decrease",
+        "short_desc": "A node will be split if this split induces a decrease of the impurity greater than or equal to this value.",
+        "type": "real",
+        "search_type": "uniform",
+        "range_low": 0.0,
+        "range_high": 0.5
+      },
+      {
+        "name": "bootstrap",
+        "short_desc": "Whether bootstrap samples are used when building trees.",
+        "type": "categorical",
+        "categories": ["True", "False"]
+      },
+      {
+        "name": "oob_score",
+        "short_desc": "Whether to use out-of-bag samples to estimate the generalization accuracy.",
+        "type": "categorical",
+        "categories": ["True", "False"]
+      }
+    ]
+  }
