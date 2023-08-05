@@ -37,7 +37,7 @@
         "name": "max_features",
         "short_desc": "The number of features to consider when looking for the best split.",
         "type": "categorical",
-        "categories": ["auto","sqrt", "log2"]
+        "categories": [null,"sqrt", "log2"]
       },
       {
         "name": "min_impurity_decrease",
@@ -46,18 +46,6 @@
         "search_type": "uniform",
         "range_low": 0.0,
         "range_high": 0.5
-      },
-      {
-        "name": "bootstrap",
-        "short_desc": "Whether bootstrap samples are used when building trees.",
-        "type": "categorical",
-        "categories": ["True", "False"]
-      },
-      {
-        "name": "oob_score",
-        "short_desc": "Whether to use out-of-bag samples to estimate the generalization accuracy.",
-        "type": "categorical",
-        "categories": ["True", "False"]
       }
     ]
   }

@@ -25,11 +25,9 @@ class Classifier:
         max_depth: Optional[Union[int, None]] = None,
         min_samples_split: Optional[int] = 2,
         min_samples_leaf: Optional[int] = 1,
-        max_features: Optional[Union[str, int, float, None]] = "auto",
+        max_features: Optional[Union[str, int, float, None]] = None,
         max_leaf_nodes: Optional[Union[int, None]] = None,
         min_impurity_decrease: float = 0.0,
-        bootstrap: bool = True,
-        oob_score: bool = True,
         random_state: Optional[int] = 42,
         **kwargs,
     ):
@@ -73,8 +71,6 @@ class Classifier:
         self.max_features = max_features
         self.max_leaf_nodes = max_leaf_nodes
         self.min_impurity_decrease = min_impurity_decrease
-        self.bootstrap = bootstrap
-        self.oob_score = oob_score
         self.random_state = random_state
         self.model = self.build_model()
 
@@ -88,8 +84,6 @@ class Classifier:
             max_features=self.max_features,
             max_leaf_nodes=self.max_leaf_nodes,
             min_impurity_decrease=self.min_impurity_decrease,
-            bootstrap=self.bootstrap,
-            oob_score=self.oob_score,
             random_state=self.random_state,
         )
         return model
